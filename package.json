@@ -1,0 +1,16 @@
+{
+  "name": "first_node_project",
+  "version": "1.0.0",
+  "description": "Learning express server and associated methods.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "devStart": "nodemon index.js"
+  },
+  "author": "Anthony O'Rourke",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "urlencoded-parser": "^1.0.0"
+  }
+}
