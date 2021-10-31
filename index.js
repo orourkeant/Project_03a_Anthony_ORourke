@@ -47,7 +47,7 @@ app.get('/users/:userId/', function (req, res){
   	if(hasValue){ // if the match exists, respond with the associated JSON payload
   		res.json(myData.users[req.params.userId]);
   	}else{ // if it doesn't exist then the user doesn't exist, send this message:
-  		res.send("No such user!");
+  		res.send("No such user!\n");
   	}
 });
 
@@ -55,7 +55,7 @@ app.get('/users/:userId/', function (req, res){
 app.get('/users/:userId/schedules', function (req, res){	
 	let scheduleInfo = schedData.filter(obj => {return req.params.userId == obj.user_id});
 	if(scheduleInfo.length === 0){
-		res.send("No schedule info for this user!")
+		res.send("No schedule info for this user!\n")
 	}else{
 		res.json(scheduleInfo);
 	}
