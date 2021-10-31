@@ -71,12 +71,13 @@ app.post('/schedules', function (req, res) {
 app.post('/users', urlencodedParser, function (req, res){
 	let crypto = require('crypto');
 	const encryptPassword = crypto.createHash('sha256').update(req.body.password).digest('base64');
-	req.body.password = encryptPassword;
+	req.body.password = encryptPassword
 	let dupeFlag = false;
 	
 	for(let i = 0; i < usrData.length; i++){
 		if(usrData[i].email === req.body.email){
 			dupeFlag = true;
+			break;
 		}
 	}
 	
